@@ -490,8 +490,7 @@ a:focus {
     display: none;
 }
 .tpl-alfx .case-img-box{
-  width:360px;
-  height:500px;
+  width:320px;
 	
 }
 .tpl-alfx .case-img-box .img-wrapper img{
