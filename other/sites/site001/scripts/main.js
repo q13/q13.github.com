@@ -154,9 +154,9 @@
                 //nextMethod:'zoomOut',
                 //nextEasing:'linear',
                 fitToView	: true,
-                autoSize:true
-                //width:'100%',
-                //height:'90%'
+                autoSize:false,
+                width:'80%',
+                height:'60%'
             });
             if(caseName.length>0){
                 caseLinkEl.filter('[href="alfx/'+caseName+'.html"]').click();
