@@ -489,15 +489,21 @@ a:focus {
 .tpl-alfx .case-others{
     display: none;
 }
-.tpl-alfx .case-img-box{
+/*.tpl-alfx .case-img-box{
   width:360px;
   height:500px;
 	
 }
 .tpl-alfx .case-img-box .img-wrapper img{
 	width:300px;
-}
+}*/
 /* tpl-alfx end */
+.fancybox-overlay .fancybox-nav{
+    width:40px;
+}
+.fancybox-overlay .fancybox-next{
+	right:20px;
+}
 
 .poplayer{
 	padding:20px;

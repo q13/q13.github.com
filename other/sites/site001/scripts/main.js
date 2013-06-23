@@ -153,10 +153,33 @@
                 //nextSpeed:3000,
                 //nextMethod:'zoomOut',
                 //nextEasing:'linear',
+		preload:1000,
                 fitToView	: true,
-                autoSize:false,
-                width:'80%',
-                height:'60%'
+                autoSize:true,
+		beforeShow:function(){
+                    var that=this;
+                    var content=this.content,
+			contentEl=$(content),
+			imgEl=contentEl.find('img');
+		    
+                    imgEl.load(function(){
+			var ready=true;
+                        $(this).data('ready',true);
+                        imgEl.not(this).each(function(){
+                            if(!$(this).data('ready')){
+                                return ready=false; 
+                            }
+                        });
+                        if(ready){
+                            $.fancybox.reposition();
+                            $.fancybox.update();
+                             
+                        }
+                        $(this).unbind('load');
+                    });
+                }
+                //width:'80%',
+                //height:'60%'
             });
             if(caseName.length>0){
                 caseLinkEl.filter('[href="alfx/'+caseName+'.html"]').click();
