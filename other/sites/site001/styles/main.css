@@ -1,6 +1,9 @@
 body{font-family: "微软雅黑","Microsoft YaHei";}
 .fl{float:left;}
 .fr{float:right;}
+.fnt-blue{
+    color:#2883C4;
+}
 /* tpl common start */
 button::-moz-focus-inner {
     padding: 0;
@@ -65,7 +68,7 @@ a:focus {
     width:138px;
 }
 .bd .tpl-inner{
-    padding:45px 0 20px;
+    padding:20px 0;
 }
 .bd .bd-inner{
     padding:10px;
@@ -356,6 +359,19 @@ a:focus {
     width:130px;
     text-align: center;
 }
+.tpl-about .member-detail-panel{
+    display: none;
+    padding:20px;
+}
+.member-detail-panel .avatar-wrapper{
+    float:left;
+}
+.member-detail-panel .detail-content{
+    margin-left:210px;
+}
+.member-detail-panel .detail-content p{
+    margin-bottom: 20px;
+}
 .member-item p{color:#2883C4;}
 /* tpl-about tpl-ywtx end */
 /* tpl-wlgd start */
@@ -375,6 +391,7 @@ a:focus {
 .tpl-wlgd .viewpoint-item .image-wrapper img{
     width:100%;
 }
+.image-wrapper img{vertical-align:middle;}
 .tpl-wlgd .viewpoint-item .desc{
     width:260px;
 }
@@ -419,6 +436,7 @@ a:focus {
     width:860px;
     margin:0 auto;
 }
+.tpl-alfx .case{height:600px;}
 .tpl-alfx .case .section-title{
     padding:10px 20px 40px 20px;
     font-family: "微软雅黑","Microsoft YaHei";
@@ -467,6 +485,16 @@ a:focus {
 .tpl-alfx .case-item p{
 	 font-family: "微软雅黑","Microsoft YaHei";
 	 color:#666;
+}
+.tpl-alfx .case-others{
+    display: none;
+}
+.tpl-alfx .case-img-box{
+  width:320px;
+	
+}
+.tpl-alfx .case-img-box .img-wrapper img{
+	width:300px;
 }
 /* tpl-alfx end */
 

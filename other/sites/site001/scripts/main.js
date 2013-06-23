@@ -51,13 +51,13 @@
             //更新状态
             var updateState=function(){
                 indicatorItemEl.removeClass('state-active').eq(activeIndex).addClass('state-active');
-				$('.to-left,.to-right',carouselEl).show();
-				if(activeIndex==0){
-					$('.to-left',carouselEl).hide();
-				}
-				if(activeIndex==totalLength-1){
-					$('.to-right',carouselEl).hide();
-				}
+                $('.to-left,.to-right',carouselEl).show();
+                if(activeIndex==0){
+                    $('.to-left',carouselEl).hide();
+                }
+                if(activeIndex==totalLength-1){
+                    $('.to-right',carouselEl).hide();
+                }
             };
             showPanelEl.css({
                 "overflow":"hidden"
@@ -81,13 +81,13 @@
                 }
                 updateState();
             }).on('click','.indicator-item',function(evt){
-                var meEl=$(this),
-                    index=indicatorItemEl.index(meEl);
-                activeIndex=index;
-                run();
-                updateState();
-                evt.preventDefault();
-            });
+                    var meEl=$(this),
+                        index=indicatorItemEl.index(meEl);
+                    activeIndex=index;
+                    run();
+                    updateState();
+                    evt.preventDefault();
+                });
         },
         indexInit:function(){
             var caseEl=$('.bd .case'),
@@ -107,7 +107,8 @@
             var that=this;
             var navListEl=$('.bd .nav-list'),
                 panelListEl=$('.bd .panel-list'),
-                carouselEl=$('.bd .member .carousel');
+                carouselEl=$('.bd .member .carousel'),
+                memberLinkEl=$('.member-l',carouselEl);
             this.tabs(navListEl,panelListEl);
             navListEl.on('switched',function(evt,nav,panel){
                 if(!carouselEl.data('rendered')&&$.contains($(panel).get(0),carouselEl.get(0))){
@@ -115,13 +116,22 @@
                     carouselEl.data('rendered',true);
                 }
             });
+            //lightbox效果
+            memberLinkEl.fancybox({
+                prevEffect: 'none',
+                nextEffect: 'none',
+                fitToView	: true,
+                autoSize:false,
+                width:650,
+                height:340
+            });
         },
         ywtxInit:function(){
             var navListEl=$('.bd .nav-list'),
                 panelListEl=$('.bd .panel-list');
-			var systemName=location.hash.slice(1);
+            var systemName=location.hash.slice(1);
             this.tabs(navListEl,panelListEl);
-			if(systemName.length>0){
+            if(systemName.length>0){
                 $('.nav-l',navListEl).filter('[href="#'+systemName+'-panel"]').click();
             }
         },
@@ -137,7 +147,17 @@
             var caseName=location.hash.slice(1);
             this.carousel(carouselEl);
             //lightbox效果
-            caseLinkEl.fancybox();
+            caseLinkEl.fancybox({
+                prevEffect: 'none',
+                nextEffect: 'none',
+                //nextSpeed:3000,
+                //nextMethod:'zoomOut',
+                //nextEasing:'linear',
+                fitToView	: true,
+                autoSize:true
+                //width:'100%',
+                //height:'90%'
+            });
             if(caseName.length>0){
                 caseLinkEl.filter('[href="alfx/'+caseName+'.html"]').click();
             }
