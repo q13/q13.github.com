@@ -144,7 +144,7 @@
             var carouselEl=$('.bd .carousel'),
                 caseEl=$('.bd .case'),
                 caseLinkEl=$('.case-l',caseEl);
-            var caseName=location.hash.slice(1);
+            var caseNameLink=location.hash.slice(1);
             this.carousel(carouselEl);
             //lightbox效果
             caseLinkEl.fancybox({
@@ -181,8 +181,8 @@
                 //width:'80%',
                 //height:'60%'
             });
-            if(caseName.length>0){
-                caseLinkEl.filter('[href="alfx/'+caseName+'.html"]').click();
+            if(caseNameLink.length>0){
+                caseLinkEl.filter('[href="'+caseNameLink+'"]').click();
             }
         }
     });

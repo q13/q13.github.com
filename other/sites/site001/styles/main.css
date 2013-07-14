@@ -42,7 +42,7 @@ a:focus {
 .hd .nav-item a,
 .hd .nav-item a:visited{
     display: block;
-    width:139px;
+    width:166px;
     height:40px;
     line-height: 40px;
     background: #0E6EB8;
@@ -373,6 +373,28 @@ a:focus {
     margin-bottom: 20px;
 }
 .member-item p{color:#2883C4;}
+
+.tpl-about .viewpoint-item{
+    padding:0 40px 40px 0;
+    height:210px;
+}
+.tpl-about .viewpoint-item .image-wrapper{
+    width:380px;
+}
+.tpl-about .viewpoint-item .image-wrapper img{
+    width:100%;
+}
+.image-wrapper img{vertical-align:middle;}
+.tpl-about .viewpoint-item .desc{
+    width:260px;
+}
+.tpl-about .viewpoint-item .block-title{
+    padding-bottom:10px;
+    font-family: "微软雅黑","Microsoft YaHei";
+    font-size:14px;
+    font-weight: bold;
+    color:#333333;
+}
 /* tpl-about tpl-ywtx end */
 /* tpl-wlgd start */
 .tpl-wlgd .viewpoint .section-title{
@@ -405,7 +427,7 @@ a:focus {
 /* tpl-wlgd end */
 /* tpl-hzhb start */
 .tpl-hzhb .partner .section-title{
-    padding:10px 20px 40px 20px;
+    padding:0 20px 40px 20px;
     font-family: "微软雅黑","Microsoft YaHei";
     font-size:14px;
     font-weight: bold;
@@ -438,7 +460,7 @@ a:focus {
 }
 .tpl-alfx .case{height:600px;}
 .tpl-alfx .case .section-title{
-    padding:10px 20px 40px 20px;
+    padding:0 20px 40px 20px;
     font-family: "微软雅黑","Microsoft YaHei";
     font-size:14px;
     font-weight: bold;
@@ -488,6 +510,30 @@ a:focus {
 }
 .tpl-alfx .case-others{
     display: none;
+}
+.tpl-alfx .case-img-title{
+    font-size:14px;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+.tpl-alfx .case-img-box .left-img-wrapper{
+    width:300px;
+    float: left;
+    display: inline-block;
+}
+.tpl-alfx .case-img-box .left-img-wrapper img{
+    width:100%;
+}
+.tpl-alfx .case-img-box .right-text-desc{
+    margin-left:315px;
+    width:400px;
+}
+.tpl-alfx .case-img-box .right-text-desc .section-title{
+    font-size: 14px;
+    font-weight: bold;
+}
+.tpl-alfx .case-img-box .right-text-desc .section-box{
+    margin-bottom: 10px;
 }
 /*.tpl-alfx .case-img-box{
   width:360px;
