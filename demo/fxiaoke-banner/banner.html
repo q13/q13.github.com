@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html class="no-js">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+
+        <!-- Place favicon.ico and apple-touch-icon(s) in the root directory -->
+
+        <link rel="stylesheet" href="https://raw.github.com/aliceui/base/master/dist/base.css">
+        <style>
+            .hot-event{
+                height:260px;
+            }
+            .event-item{
+                width:350px;
+                height:200px;
+            }
+            .event-item1{
+                background:url(http://placehold.it/350x200/ff0000/000) no-repeat;
+            }
+            .event-item2{
+                background:url(http://placehold.it/350x200/00ff00/000) no-repeat;
+            }
+            .event-item3{
+                background:url(http://placehold.it/350x200/0000ff/000) no-repeat;
+            }
+            .switch-tab{
+                position:absolute;
+                bottom:60px;
+                left:30px;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="hot-event">
+            <div class="event-item event-item1" style="display: none;">
+              <!--<div class="bannerxx">
+                <p class="bannertt" style="width:168px;">敢于不同</p>
+                <p class="bannerttx" style="width:258px;">专业专注 创造销售力提升正能量</p>
+              </div>-->
+            </div>
+            <div class="event-item event-item2" style="display: none;">
+                <!--<div class="bannerxx">
+                <p class="bannertt" style="width:270px;">重新定义CRM</p>
+                <p class="bannerttx" style=" width:470px">Cloud云&nbsp;&nbsp;Resource资源&nbsp;&nbsp;Mobile移动&nbsp;&nbsp;构建全新动态CRM</p>
+                
+                </div>-->
+              
+            </div>
+            <div class="event-item event-item3" style="display: none;">
+              <!--<div class="bannerxx">
+                <p class="bannertt" style="width:280px;">打单&nbsp;&nbsp;但不单打</p>
+                <p class="bannerttx" style="width:300px;">将公司装在手机里&nbsp;&nbsp;超级伙伴高效协作</p>
+              </div>-->
+            </div>
+            <div class="switch-tab"> <a href="#" onclick="return false;" class="current">1</a> <a href="#" onclick="return false;">2</a> <a href="#" onclick="return false;">3</a> </div>
+      </div>
+       <button class="lock-btn">lock</button>&nbsp;<button class="unlock-btn">unlock</button>  
+        <script src="//ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js"></script>
+        <script src="banner.js"></script>
+        <script>
+            jQuery(function($){
+                $('.hot-event').banner({
+                    'itemSelector':'.event-item',
+                    duration: 1500,  //动画过程
+                    interval:3000 //动画间隔
+                }).banner('startPlay');  
+                $('.lock-btn').click(function(){
+                    $('.hot-event').banner('lock',true);    
+                });
+                $('.unlock-btn').click(function(){
+                    $('.hot-event').banner('lock',false);    
+                }); 
+                $('.switch-tab a').click(function(){
+                    $('.hot-event').banner('switchTo',$('.switch-tab a').index(this));    
+                });  
+            });
+        </script>
+    </body>
+</html>
